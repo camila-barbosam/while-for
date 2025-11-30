@@ -1,0 +1,25 @@
+def menu(): 
+    print( """
+   **** Menu de opções****
+        1 - Contar até um número
+        2 - Mostrar uma palavra várias vezes
+        3 - Sair
+""")
+    escolha = int(input("Escolha uma opção: "))
+    return escolha
+while True:
+    opcao = menu()
+    if opcao == 1:
+        numero = int(input("Digite um número para contar até ele: "))
+        for i in range(1, numero + 1):
+            print(i)
+    elif opcao == 2:
+        palavra = input("Digite uma palavra: ")
+        vezes = int(input("Quantas vezes deseja mostrar a palavra? "))
+        for _ in range(vezes):
+            print(palavra)
+    elif opcao == 3:
+        print("Saindo do programa...")
+        break
+    else:
+        print("Opção inválida! Tente novamente.")
